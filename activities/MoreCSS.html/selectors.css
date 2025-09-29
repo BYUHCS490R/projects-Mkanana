@@ -1,0 +1,23 @@
+body {
+    font-family: monospace;
+}
+
+header h1 {
+    color: rgb(106, 0, 0);
+}
+
+p {
+    color: rgb(255, 0, 255);
+}
+
+#Hawaii {
+    color: rgb(255, 0, 0);
+}
+
+.Major {
+    color:rgb(128, 255, 0);
+}
+
+.special {
+    font-weight: 800;
+}
