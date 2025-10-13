@@ -1,0 +1,27 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    background-color: yellow;
+    padding: 0px;
+    border-style: solid;
+    border-color: red;
+    border-width: 5px;
+}
+
+nav {
+    border: thin solid black;
+    padding: 15px;
+
+}
+
+
+header h1 {
+    background-color: pink;
+    margin: 0px;
+}
+main h1 {
+    border: thin dashed blue;
+    background-color: yellow;
+}
