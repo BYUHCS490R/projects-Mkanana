@@ -1,0 +1,32 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav a {
+    display: block;
+    padding: 10px;
+    background-color: aqua;
+    text-decoration: none;
+    border-bottom: thin solid white;
+}
+.Beach {
+    border: thin solid black;
+    width: 318px;
+    
+}
+.floater {
+    float: left;
+}
+
+.Beach img {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+/*
+.hammer {
+    position: relative;
+    top: 300px;
+}*/
