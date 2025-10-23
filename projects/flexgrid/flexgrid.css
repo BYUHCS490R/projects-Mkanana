@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #444;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+
+main {
+  display: flex;
+  padding: 1rem;
+}
+
+aside {
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* PROFILE CARDS */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+}
+
+/* FOOTER GRID */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 0.5rem;
+}
+
+footer a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+  background-color: #333;
+  text-align: center;
+  border-radius: 4px;
+}
+
+footer a:hover {
+  background-color: #555;
+}
