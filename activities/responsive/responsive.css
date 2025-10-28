@@ -61,3 +61,14 @@ nav a:hover {
     display: flex;
     flex-flow: row wrap;
 }
+@media ONLY screen AND (max-width: 400px) {
+    nav {
+        flex-direction: column;
+    }
+    .main-row {
+        flex-direction: column-reverse;
+    }
+    .sidebar {
+        width: 100px;
+    }
+}
