@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="Forms.css">
+</head>
+<body>
+    <header>
+        <h1>Web Page</h1>
+    </header>
+    <main>
+        <h1>Forms</h1>
+        <form action="Forms.html" method="post">
+            <div>
+                <label for="fname">Full Name:</label>
+                <input type="text" name="fname" placeholder="Full Name" id="fname">
+            </div>
+            <div>
+                <label for="fname">Email:</label>
+                <input type="text" name="Full Name" value="your@email.com" id="fname">
+            </div>
+            <div>
+                <label for="pass">Password:</label>
+                <input type="password" name="pass">
+            </div>
+            <div>
+                <label for="State">State:</label>
+                <select name="state" id="state">
+                    <option value="blank">- - -</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="Ca">California</option>
+                    <option value="OR">Oregon</option>
+                    <option value="TX">Texas</option>
+                </select>
+            </div>
+            <div>
+                <label><input type="checkbox">I agree to the terms</label>
+            </div>
+            <div>
+                Gender
+                <label><input type="radio" name="Gender" value="Male"> Male</label>
+                <label><input type="radio" name="Gender" value="Female"> Female</label>
+            </div>
+            <div>
+                <label for="comment">Comments</label>
+                <textarea name="comment" id="comment">Hello</textarea>
+            </div>
+            <input type="submit" value="Sign up">
+        </form>
+        <p>The action is like the href link</p>
+        <p>Post is change, add, update, or remove data</p>
+        <p>Get is reading the data, and pressing links is a Get request</p>
+    </main>
+    <footer>
+        &copy;2025 Micah Kanana
+    </footer>
+</body>
+</html>
