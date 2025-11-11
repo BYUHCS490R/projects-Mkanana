@@ -13,19 +13,21 @@
     <main>
         <h1>Forms</h1>
         <form action="Forms.html" method="post">
-            <div>
-                <label for="fname">Full Name:</label>
-                <input type="text" name="fname" placeholder="Full Name" id="fname">
-            </div>
-            <div>
-                <label for="fname">Email:</label>
-                <input type="text" name="Full Name" value="your@email.com" id="fname">
-            </div>
-            <div>
-                <label for="pass">Password:</label>
-                <input type="password" name="pass">
-            </div>
-            <div>
+            <fieldset>
+                <legend>YURR</legend>
+                <div class="form-row">
+                    <label for="fname">Full Name:</label>
+                    <input type="text" name="fname" placeholder="Full Name" id="fname">
+                </div>
+                <div class="form-row">
+                    <label for="fname">Email:</label>
+                    <input type="text" name="Full Name" value="your@email.com" id="fname">
+                </div>
+                <div class="form-row">
+                    <label for="pass">Password:</label>
+                    <input type="password" name="pass">
+                </div>
+            <div class="form-row">
                 <label for="State">State:</label>
                 <select name="state" id="state">
                     <option value="blank">- - -</option>
@@ -35,19 +37,24 @@
                     <option value="TX">Texas</option>
                 </select>
             </div>
-            <div>
+            <div class="check-row">
+            <div class="spacer"></div>
                 <label><input type="checkbox">I agree to the terms</label>
             </div>
-            <div>
-                Gender
+            <div class="check-row">
+            <div class="spacer">Gender</div>
                 <label><input type="radio" name="Gender" value="Male"> Male</label>
                 <label><input type="radio" name="Gender" value="Female"> Female</label>
             </div>
-            <div>
+            <div class="form-row">
                 <label for="comment">Comments</label>
                 <textarea name="comment" id="comment">Hello</textarea>
             </div>
+            <div class="form-row">
+            <div class="spacer"></div>
             <input type="submit" value="Sign up">
+            </div>
+            </fieldset>
         </form>
         <p>The action is like the href link</p>
         <p>Post is change, add, update, or remove data</p>
