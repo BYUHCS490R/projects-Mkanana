@@ -59,9 +59,34 @@
         <p>The action is like the href link</p>
         <p>Post is change, add, update, or remove data</p>
         <p>Get is reading the data, and pressing links is a Get request</p>
+        <p>JavaScript is a scripting language for making webpages interactive, it got its name from a 1990s marketing move tying it to Java, 
+            it can run in the browser or with Node.js on the server, the most popular front-end library used to be jQuery, and today the most popular one is React.  </p>
     </main>
     <footer>
         &copy;2025 Micah Kanana
     </footer>
+    <script>
+        document.getElementById("myForm").addEventListener("submit",function(event) {
+            event.preventDefault();
+            alert("Form Submitted")
+
+            const fname = documrnt.getElementById("fname").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("pass").value;
+
+            if (!fname || !email) {
+                alert("You need a name and email.");
+                return;
+            }
+
+            const formData = {
+                name: fname,
+                email: email,
+                password: password
+            };
+
+            console.log(formData);
+        })
+    </script>
 </body>
 </html>
