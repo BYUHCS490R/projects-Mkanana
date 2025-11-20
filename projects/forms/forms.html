@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <header>
+        <h1>Web Page</h1>
+    </header>
+    <main>
+        <!-- message area for JSON response -->
+        <div id="message" class="message"></div>
+
+        <h1>Forms</h1>
+        <!-- add id so JS can find the form -->
+        <form id="myForm" action="Forms.html" method="post">
+            <fieldset>
+                <legend>YURR</legend>
+
+                <div class="form-row">
+                    <label for="fname">Full Name:</label>
+                    <input type="text" name="fname" placeholder="Full Name" id="fname">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="">
+                </div>
+
+                <div class="form-row">
+                    <label for="pass">Password:</label>
+                    <input type="password" name="pass" id="pass">
+                </div>
+
+                <div class="form-row">
+                    <label for="age">Age (18–99):</label>
+                    <input type="number" name="age" id="age" min="1" max="120">
+                </div>
+
+                <div class="form-row">
+                    <label for="state">State:</label>
+                    <select name="state" id="state">
+                        <option value="">- - -</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="CA">California</option>
+                        <option value="OR">Oregon</option>
+                        <option value="TX">Texas</option>
+                    </select>
+                </div>
+
+                <div class="check-row">
+                    <div class="spacer"></div>
+                    <label>
+                        <input type="checkbox" id="terms"> I agree to the terms
+                    </label>
+                </div>
+
+                <div class="check-row">
+                    <div class="spacer">Gender</div>
+                    <label><input type="radio" name="Gender" value="Male"> Male</label>
+                    <label><input type="radio" name="Gender" value="Female"> Female</label>
+                </div>
+
+                <div class="form-row">
+                    <label for="comment">Comments</label>
+                    <textarea name="comment" id="comment">Hello</textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="spacer"></div>
+                    <input type="submit" value="Sign up">
+                </div>
+            </fieldset>
+        </form>
+
+        <p>The action is like the href link</p>
+        <p>Post is change, add, update, or remove data</p>
+        <p>Get is reading the data, and pressing links is a Get request</p>
+        <p>JavaScript is a scripting language for making webpages interactive, it got its name from a 1990s marketing move tying it to Java, 
+            it can run in the browser or with Node.js on the server, the most popular front-end library used to be jQuery, and today the most popular one is React.</p>
+    </main>
+    <footer>
+        &copy;2025 Micah Kanana
+    </footer>
+    <script src="forms.js"></script>
+</html>
