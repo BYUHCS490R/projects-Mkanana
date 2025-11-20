@@ -11,100 +11,81 @@
         <h1>Web Page</h1>
     </header>
     <main>
-        <div class="message"></div>
+        <!-- message area for JSON response -->
+        <div id="message" class="message"></div>
+
         <h1>Forms</h1>
-        <form action="Forms.html" method="post">
+        <!-- add id so JS can find the form -->
+        <form id="myForm" action="Forms.html" method="post">
             <fieldset>
                 <legend>YURR</legend>
+
                 <div class="form-row">
                     <label for="fname">Full Name:</label>
                     <input type="text" name="fname" placeholder="Full Name" id="fname">
                 </div>
+
                 <div class="form-row">
-                    <label for="fname">Email:</label>
-                    <input type="text" name="Full Name" value="your@email.com" id="fname">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="">
                 </div>
+
                 <div class="form-row">
                     <label for="pass">Password:</label>
-                    <input type="password" name="pass">
+                    <input type="password" name="pass" id="pass">
                 </div>
-            <div class="form-row">
-                <label for="State">State:</label>
-                <select name="state" id="state">
-                    <option value="blank">- - -</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="Ca">California</option>
-                    <option value="OR">Oregon</option>
-                    <option value="TX">Texas</option>
-                </select>
-            </div>
-            <div class="check-row">
-            <div class="spacer"></div>
-                <label><input type="checkbox">I agree to the terms</label>
-            </div>
-            <div class="check-row">
-            <div class="spacer">Gender</div>
-                <label><input type="radio" name="Gender" value="Male"> Male</label>
-                <label><input type="radio" name="Gender" value="Female"> Female</label>
-            </div>
-            <div class="form-row">
-                <label for="comment">Comments</label>
-                <textarea name="comment" id="comment">Hello</textarea>
-            </div>
-            <div class="form-row">
-            <div class="spacer"></div>
-            <input type="submit" value="Sign up">
-            </div>
+
+                <div class="form-row">
+                    <label for="age">Age (18–99):</label>
+                    <input type="number" name="age" id="age" min="1" max="120">
+                </div>
+
+                <div class="form-row">
+                    <label for="state">State:</label>
+                    <select name="state" id="state">
+                        <option value="">- - -</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="CA">California</option>
+                        <option value="OR">Oregon</option>
+                        <option value="TX">Texas</option>
+                    </select>
+                </div>
+
+                <div class="check-row">
+                    <div class="spacer"></div>
+                    <label>
+                        <input type="checkbox" id="terms"> I agree to the terms
+                    </label>
+                </div>
+
+                <div class="check-row">
+                    <div class="spacer">Gender</div>
+                    <label><input type="radio" name="Gender" value="Male"> Male</label>
+                    <label><input type="radio" name="Gender" value="Female"> Female</label>
+                </div>
+
+                <div class="form-row">
+                    <label for="comment">Comments</label>
+                    <textarea name="comment" id="comment">Hello</textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="spacer"></div>
+                    <input type="submit" value="Sign up">
+                </div>
             </fieldset>
         </form>
+
         <p>The action is like the href link</p>
         <p>Post is change, add, update, or remove data</p>
         <p>Get is reading the data, and pressing links is a Get request</p>
         <p>JavaScript is a scripting language for making webpages interactive, it got its name from a 1990s marketing move tying it to Java, 
-            it can run in the browser or with Node.js on the server, the most popular front-end library used to be jQuery, and today the most popular one is React.  </p>
+            it can run in the browser or with Node.js on the server, the most popular front-end library used to be jQuery, and today the most popular one is React.</p>
     </main>
     <footer>
         &copy;2025 Micah Kanana
     </footer>
-    <script>
-        document.getElementById("myForm").addEventListener("submit",function(event) {
-            event.preventDefault();
-            alert("Form Submitted")
 
-            const fname = documrnt.getElementById("fname").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("pass").value;
-
-            if (!fname || !email) {
-                alert("You need a name and email.");
-                return;
-            }
-
-            const formData = {
-                name: fname,
-                email: email,
-                password: password
-            };
-
-            console.log(formData);
-
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "submit.json", true);
-            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    alert("Form submitted successfully!");
-                    const response = JSON.parse(xhr.responseText);
-                    console.log(response);
-                    //document.getElementById(ʻmyFormʻ).reset();
-                    document.getElementById('myForm').innerHTML = '';
-                    document.getElementById('message').innerText = response.message;
-                } else if (xhr.readyState === 4) {
-                    alert("Error submitting form.");
-                }            
-            };
-            xhr.send(JSON.stringify(formData));
-        })
-    </script>
+    <script src="forms.js"></script>
 </body>
 </html>
