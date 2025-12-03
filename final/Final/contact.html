@@ -14,6 +14,8 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="culture.html">Culture</a></li>
       <li><a href="history.html">History & Data</a></li>
+      <li><a href="voyaging.html">Voyaging</a></li>
+      <li><a href="kapu.html">Kapu System</a></li>
       <li><a href="contact.html" class="active">Share Manaʻo</a></li>
     </ul>
   </nav>
@@ -22,21 +24,20 @@
 <main>
   <section>
     <h2>Share Your Thoughts (Manaʻo)</h2>
-    <p>Use this form to share feedback, questions, or personal connections to Hawaiian culture and history. Your responses can help improve how this topic is explained to others.</p>
+    <p>Use this form to share feedback, questions, or personal connections to Hawaiian culture and history.</p>
   </section>
 
   <section>
-    <form action="confirm.php" method="post" class="contact-form">
+    
+    <form id="manaoForm" method="post" class="contact-form">
       <div class="form-field">
         <label for="name">Name:</label>
         <input id="name" name="name" type="text" required>
       </div>
-
       <div class="form-field">
         <label for="email">Email:</label>
         <input id="email" name="email" type="email" required>
       </div>
-
       <div class="form-field">
         <label for="connection">Your connection to Hawaiʻi:</label>
         <select id="connection" name="connection">
@@ -46,21 +47,30 @@
           <option value="other">Other</option>
         </select>
       </div>
-
       <div class="form-field">
         <label for="message">Manaʻo (Thoughts / Comments):</label>
         <textarea id="message" name="message" rows="4" required></textarea>
       </div>
-
       <div class="form-field">
         <button type="submit">Send Manaʻo</button>
       </div>
     </form>
+
+   
+    <div id="successMessage" class="success-section" style="display: none;">
+      <div class="hero">
+        <h2>Thanks for completing the form. Mahalo!</h2>
+        <p>Mahalo nui loa for sharing your manaʻo!</p>
+      </div>
+      <button id="resetBtn" class="form-field">Submit Another</button>
+    </div>
   </section>
 </main>
 
 <footer>
   <p>&copy; 2025 Micah Kanana</p>
 </footer>
+
+<script src="contact-script.js"></script>
 </body>
 </html>
